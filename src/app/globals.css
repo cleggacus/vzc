@@ -1,9 +1,31 @@
-:root {
-  --bg-1: #ffffff;
-  --fg-1: #000000;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+  --bg-color-1: #fbfdff;
+  --bg-color-2: #ffffff;
+  --bg-color-3: #293245;
+
+  --fg-color-1: #000000;
+  --fg-color-2: #000000;
+  --fg-color-3: #ffffff;
+
+  --accent-bg-color-1: #3E9A83;
+  --accent-bg-color-2: #3E9A83;
+  --accent-bg-color-3: #527DC8;
 
   --header-height: 70px;
+
+  --card-1-bg-color: var(--bg-color-2);
+  --card-1-fg-color: var(--fg-color-2);
+  --card-1-border: none;
+  --card-1-shadow: 0px 0px 10px #0005;
+
+  --card-2-bg-color: var(--bg-color-3);
+  --card-2-fg-color: var(--fg-color-3);
+  --card-2-border: none;
+  --card-2-shadow: 0px 0px 10px #0005;
+
+  --card-radius: 1rem;
 }
 
 html,
@@ -14,20 +36,29 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--fg-color-1);
+  background: var(--bg-color-1);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+

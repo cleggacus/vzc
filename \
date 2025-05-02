@@ -1,3 +1,5 @@
+"use client";
+
 import { FaUserTie } from "react-icons/fa"
 import Card from "../ui/card"
 import styles from "./services.module.css"
@@ -5,81 +7,64 @@ import { IconType } from "react-icons"
 import { MdAssessment } from "react-icons/md"
 import { FaComputer } from "react-icons/fa6"
 import { TiSpanner } from "react-icons/ti"
-import Button from "../ui/button"
+import { useState } from "react"
 
 export default function Services() {
+  const [selected, setSelected] = useState(0);
+
   return <div className={styles.container} id="services">
     <h1>Our Services</h1>
-    <p>We provide a multitude of services, here is a breif overview of our services</p>
 
     <div className={styles.cards}>
       <ServiceCard
+        selected={selected == 0}
+        onClick={() => setSelected(0)}
         icon={FaUserTie}
         name="Expert Consultation"
         description="Get personalized guidance from our ESG specialists"
-        points={[
-          "fio aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "joawie jfoiwaej fioaw jeofi woaef",
-          "jfoiwaej fioaw jeofi woaef",
-        ]}
       />
 
       <ServiceCard
+        selected={selected == 1}
+        onClick={() => setSelected(1)}
         icon={MdAssessment}
         name="Free Assesment"
         description="Get a detailed analysis of your ESG needs"
-        points={[
-          "fio aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "joawie jfoiwaej fioaw jeofi woaef",
-          "jfoiwaej fioaw jeofi woaef",
-        ]}
       />
 
       <ServiceCard
+        selected={selected == 2}
+        onClick={() => setSelected(2)}
         icon={FaComputer}
         name="Demo Session"
         description="See the platform in action with your data"
-        points={[
-          "fio aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "joawie jfoiwaej fioaw jeofi woaef",
-          "jfoiwaej fioaw jeofi woaef",
-        ]}
       />
 
       <ServiceCard
+        selected={selected == 3}
+        onClick={() => setSelected(3)}
         icon={TiSpanner}
         name="Implementation Support"
         description="Full assistance with platform onboarding"
-        points={[
-          "fio aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "joawie jfoiwaej fioaw jeofi woaef",
-          "jfoiwaej fioaw jeofi woaef",
-        ]}
       />
     </div>
   </div>
 }
 
 type ServiceCardProps = {
+  selected: boolean,
   icon: IconType,
   name: string,
   description: string,
-  points: string[]
+  onClick?: () => void,
 }
 
 function ServiceCard(props: ServiceCardProps) {
   const Icon = props.icon;
 
-  return <Card className={styles.card}>
+  return <Card onClick={props.onClick} className={`${styles.card} ${props.selected ? styles.selected : ""}`} variant={props.selected ? "2" : "1"}>
     <Icon className={styles.icon} />
     <h2>{props.name}</h2>
     <p>{props.description}</p>
-    <ul>
-      {props.points.map((point, i) => <li key={i}>{point}</li>)}
-    </ul>
   </Card>
 }

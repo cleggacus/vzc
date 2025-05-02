@@ -1,0 +1,148 @@
+.container {
+  scroll-margin-top: var(--scroll-margin-top);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 3rem;
+  background: 
+    linear-gradient(to bottom, transparent 60%, var(--bg-color-1) 100%),
+    linear-gradient(
+        135deg,
+        rgba(0, 255, 150, 0.2),
+        var(--bg-color-1),
+        rgba(0, 150, 255, 0.2)
+      ),
+      var(--bg-color-1);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.heading > h1,
+.heading > p {
+  position: relative;
+}
+
+.heading > h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.heading > p {
+  transition-delay: 0.2s;
+}
+
+.heading .buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-weight: bold;
+  opacity: 0;
+  transition-delay: 0.4s;
+}
+
+.heading button {
+  background: linear-gradient(135deg, #00ffbf, #004dd3);
+}
+
+.heading .highlight {
+  background: linear-gradient(135deg, #00cf9b, #004dd3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.cards {
+  display: flex;
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 25rem;
+  gap: 2rem;
+}
+
+.card:nth-child(1) {
+  transition-delay: 0.6s;
+}
+
+.card:nth-child(3) {
+  transition-delay: 0.8s;
+}
+
+.card ul {
+  padding: 0 1rem 0 2rem;
+  width: 100%;
+}
+
+.card p {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.card .icon1,
+.card .icon2 {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 1rem;
+}
+
+.card .icon1 {
+  color: var(--accent-bg-color-2);
+}
+
+.card .icon2 {
+  color: var(--accent-bg-color-3);
+}
+
+.card button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  opacity: 0.3;
+}
+
+.connector > div {
+  height: 3px;
+  flex: 1;
+  background-color: var(--fg-color-1);
+  transition-delay: 1s;
+}
+
+.connector .icon {
+  color: var(--fg-color-1);
+  width: 3rem;
+  height: 3rem;
+  transition-delay: 1s;
+}
+
+.fadeIn {
+  opacity: 0;
+  transform: translateY(2rem);
+
+  transition: 
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.visible .fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}

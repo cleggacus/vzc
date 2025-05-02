@@ -1,0 +1,53 @@
+.container {
+  scroll-margin-top: var(--header-height);
+  max-width: 1500px;
+  width: 100%;
+  padding: 3rem;
+  margin: 2rem auto;
+}
+
+
+.container > h1,
+.container > p {
+  text-align: center;
+}
+
+.container > h1 {
+  font-size: 3em;
+  margin: 1rem;
+}
+
+.container > p {
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.card .icon {
+  width: 4rem;
+  margin: 1rem auto;
+  height: auto;
+  color: var(--accent-bg-color-1);
+}
+
+.card h2,
+.card p {
+  text-align: center;
+  margin: 0.25rem 0;
+}
+
+.card ul {
+  padding: 1.5rem 1rem 1rem 1.5rem;
+}
