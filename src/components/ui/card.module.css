@@ -1,0 +1,19 @@
+.container {
+  border-radius: var(--card-radius);
+  padding: 1rem;
+}
+
+.variant-1 {
+  background-color: var(--card-1-bg-color);
+  color: var(--card-1-fg-color);
+  border: var(--card-1-border);
+  box-shadow: var(--card-1-shadow);
+}
+
+.variant-2 {
+  background-color: var(--card-2-bg-color);
+  color: var(--card-2-fg-color);
+  border: var(--card-2-border);
+  box-shadow: var(--card-2-shadow);
+}
+
