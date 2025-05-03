@@ -18,18 +18,18 @@
   display: flex;
   align-items: center;
   padding-right: 5rem;
-  flex: 3;
-  height: fit-content;
+  height: 30rem;
 }
 
 .container .left .secondaryImage,
 .container .left .mainImage {
   border-radius: 1rem;
+  object-fit: cover;
 }
 
 .container .left .mainImage {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   transition-delay: 0.2s;
 }
 
@@ -77,4 +77,52 @@
 .visible .fadeIn {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media only screen and (max-width: 1200px) {
+  .container .left .mainImage {
+    width: 20rem;
+  }
+
+  .container .left .secondaryImage {
+    height: 60%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .container .left {
+    display: flex;
+    gap: 1rem;
+    padding-right: 0;
+    height: 20rem;
+  }
+
+  .container .left .mainImage {
+    height: 100%;
+    flex: 1;
+  }
+
+  .container .left .secondaryImage {
+    position: relative;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .container .left {
+    height: 10rem;
+  }
+
+  .container .left .secondaryImage {
+    display: none;
+  }
 }
