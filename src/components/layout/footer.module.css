@@ -2,20 +2,22 @@
   width: 100%;
   background-color: var(--bg-color-3);
   color: var(--fg-color-3);
-  padding: 3rem 0;
+  padding: 3rem;
 }
 
 .container .content {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 1500px;
+  max-width: 1500px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .contact {
   width: 100%;
   display: flex;
+  gap: 2rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -25,7 +27,8 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 25rem;
+  max-width: 25rem;
+  width: 100%;
   text-align: center;
 }
 
@@ -61,4 +64,26 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .bottom {
+    flex-direction: column;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact .form .inputs {
+    flex-direction: column;
+  }
 }
