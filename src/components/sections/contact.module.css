@@ -98,4 +98,13 @@
   .container {
     padding: 1rem;
   }
+
+.container > h1 {
+  font-size: 2em;
+}
+
+  .container > p {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
 }

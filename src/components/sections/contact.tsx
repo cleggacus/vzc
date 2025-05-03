@@ -13,7 +13,7 @@ export default function Contact() {
   const {
     ref,
     isVisible
-  } = useScrollIntoView<HTMLDivElement>(0.25);
+  } = useScrollIntoView<HTMLDivElement>();
 
   return <div ref={ref} className={`${styles.container} ${isVisible ? styles.visible : 0}`} id="contact">
     <h1 className={styles.fadeIn}>Contact Us</h1>

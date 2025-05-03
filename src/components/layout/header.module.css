@@ -36,3 +36,9 @@
   height: 2rem;
   width: auto;
 }
+
+@media only screen and (max-width: 900px) {
+  .container .left h1 {
+    display: none;
+  }
+}

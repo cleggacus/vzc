@@ -13,7 +13,7 @@ export default function Services() {
   const {
     ref,
     isVisible
-  } = useScrollIntoView<HTMLDivElement>(0.25);
+  } = useScrollIntoView<HTMLDivElement>();
 
   return <div ref={ref} className={`${styles.container} ${isVisible ? styles.visible : ""}`} id="services">
     <h1 className={styles.fadeIn}>Our Services</h1>

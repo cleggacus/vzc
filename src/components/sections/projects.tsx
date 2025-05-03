@@ -21,7 +21,7 @@ export default function Projects() {
   const {
     ref,
     isVisible
-  } = useScrollIntoView<HTMLDivElement>(0.25);
+  } = useScrollIntoView<HTMLDivElement>();
 
   return <div ref={ref} className={`${styles.container} ${isVisible ? styles.visible : ""}`} id="projects">
     <h1 className={styles.fadeUp}>Testimonials</h1>

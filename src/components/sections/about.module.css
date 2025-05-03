@@ -92,7 +92,7 @@
 @media only screen and (max-width: 1000px) {
   .container {
     flex-direction: column-reverse;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .container .left {
@@ -120,6 +120,10 @@
 
   .container .left {
     height: 10rem;
+  }
+
+  .container .right h1 {
+    font-size: 2rem;
   }
 
   .container .left .secondaryImage {
