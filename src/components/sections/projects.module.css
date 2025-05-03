@@ -92,7 +92,7 @@
 
 .testimonials .column .flex2 {
   flex: 2;
-}
+} n
 
 
 .fadeDown {
@@ -117,4 +117,53 @@
 .visible .fadeUp {
   opacity: 1;
   transform: translateY(0);
+  
+}
+
+@media only screen and (max-width: 1400px) {
+  .testimonials .column:nth-child(1),
+  .testimonials .column:nth-child(5) {
+    display: none;
+  }
+
+  .testimonials .overlay {
+    background: linear-gradient(to bottom, var(--bg-color-1) 0%, transparent 40%, transparent 60%, var(--bg-color-1) 100%);
+  }
+
+  .testimonials {
+    padding: 0 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .testimonials .column > :nth-child(1),
+  .testimonials .column > :nth-child(3) {
+    display: none;
+  }
+
+  .testimonials .overlay {
+    display: none;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    margin: 0;
+    overflow: visible;
+  }
+
+  .testimonials {
+    gap: 1.5rem;
+    height: auto;
+  }
+
+  .testimonials .column > div {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
 }
