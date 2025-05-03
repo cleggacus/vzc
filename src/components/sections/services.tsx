@@ -1,3 +1,5 @@
+"use client";
+
 import { FaUserTie } from "react-icons/fa"
 import Card from "../ui/card"
 import styles from "./services.module.css"
@@ -5,12 +7,17 @@ import { IconType } from "react-icons"
 import { MdAssessment } from "react-icons/md"
 import { FaComputer } from "react-icons/fa6"
 import { TiSpanner } from "react-icons/ti"
-import Button from "../ui/button"
+import { useScrollIntoView } from "@/hooks/scrollIntoView"
 
 export default function Services() {
-  return <div className={styles.container} id="services">
-    <h1>Our Services</h1>
-    <p>We provide a multitude of services, here is a breif overview of our services</p>
+  const {
+    ref,
+    isVisible
+  } = useScrollIntoView<HTMLDivElement>(0.25);
+
+  return <div ref={ref} className={`${styles.container} ${isVisible ? styles.visible : ""}`} id="services">
+    <h1 className={styles.fadeIn}>Our Services</h1>
+    <p className={styles.fadeIn}>We provide a multitude of services, here is a breif overview of our services</p>
 
     <div className={styles.cards}>
       <ServiceCard
@@ -74,7 +81,7 @@ type ServiceCardProps = {
 function ServiceCard(props: ServiceCardProps) {
   const Icon = props.icon;
 
-  return <Card className={styles.card}>
+  return <Card className={`${styles.card} ${styles.fadeIn}`}>
     <Icon className={styles.icon} />
     <h2>{props.name}</h2>
     <p>{props.description}</p>

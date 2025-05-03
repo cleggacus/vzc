@@ -1,6 +1,7 @@
 .container {
   border-radius: var(--card-radius);
   padding: 1rem;
+  overflow: hidden;
 }
 
 .variant-1 {

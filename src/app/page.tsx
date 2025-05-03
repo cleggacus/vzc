@@ -5,6 +5,7 @@ import Hero from "@/components/sections/hero";
 import Services from "@/components/sections/services";
 import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
+import Footer from "@/components/layout/footer";
 
 export default function Home() {
   return <div className={styles.container}>
@@ -14,5 +15,6 @@ export default function Home() {
     <Services />
     <Projects />
     <Contact />
+    <Footer />
   </div>
 }

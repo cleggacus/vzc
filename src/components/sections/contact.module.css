@@ -1,0 +1,91 @@
+.container {
+  scroll-margin-top: var(--header-height);
+  width: 100%;
+  padding: 3rem;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > h1,
+.container > p {
+  text-align: center;
+}
+
+.container > h1 {
+  font-size: 3em;
+  margin: 1rem;
+  transition-delay: 0.2s;
+}
+
+.container > p {
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+  transition-delay: 0.4s;
+}
+
+.container .card {
+  width: 55rem;
+  display: flex;
+  padding: 0;
+  transition-delay: 0.6s;
+}
+
+.container .card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-color-3);
+  color: var(--fg-color-3);
+  padding: 2rem;
+  width: 23rem;
+}
+
+.container .card .info p {
+  margin: 1rem 0;
+}
+
+.container .card .info .tag {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container .card .info .tag .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--accent-bg-color-3);
+}
+
+.container .card .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--bg-color-2);
+  padding: 2rem;
+  flex: 1;
+}
+
+.container .card .form .name {
+  display: flex;
+  gap: 1rem;
+}
+
+.container .card .form .name > * {
+  flex: 1;
+}
+
+.fadeIn {
+  opacity: 0;
+  transform: translateY(2rem);
+
+  transition: 
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.visible .fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}

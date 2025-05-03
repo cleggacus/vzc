@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  background-color: var(--bg-color-3);
+  color: var(--fg-color-3);
+  padding: 3rem 0;
+}
+
+.container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 1500px;
+  margin: 0 auto;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 25rem;
+  text-align: center;
+}
+
+.contact .form .inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact .form .inputs .input {
+  flex: 1;
+}
+
+.contact .socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact .socials .icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact .socials .icons .icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

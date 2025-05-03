@@ -13,6 +13,9 @@
   --accent-bg-color-2: #3E9A83;
   --accent-bg-color-3: #527DC8;
 
+  --input-bg-color: #eeeef3;
+  --input-fg-color: #000000;
+
   --header-height: 70px;
 
   --card-1-bg-color: var(--bg-color-2);
