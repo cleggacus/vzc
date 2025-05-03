@@ -26,7 +26,8 @@
 }
 
 .container .card {
-  width: 55rem;
+  width: 100%;
+  max-width: 55rem;
   display: flex;
   padding: 0;
   transition-delay: 0.6s;
@@ -36,6 +37,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 1rem;
   background-color: var(--bg-color-3);
   color: var(--fg-color-3);
   padding: 2rem;
@@ -88,4 +90,24 @@
 .visible .fadeIn {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .card {
+    flex-direction: column-reverse;
+  }
+
+  .container .card .info {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .container .card .form .name {
+    flex-direction: column;
+  }
 }
