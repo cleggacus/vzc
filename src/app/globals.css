@@ -9,6 +9,9 @@
   --fg-color-2: #000000;
   --fg-color-3: #ffffff;
 
+  --error-fg-1: #ff0000;
+  --error-bg-1: #ffe2e2;
+
   --accent-bg-color-1: #3E9A83;
   --accent-bg-color-2: #3E9A83;
   --accent-bg-color-3: #527DC8;

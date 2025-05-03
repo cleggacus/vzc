@@ -14,7 +14,7 @@ export type ErrorMap<T extends ZodFormSchema> = {
 
 export type FormArg<T extends ZodFormSchema> = {
   schema: T;
-  default: Partial<z.input<T>>;
+  default?: Partial<z.input<T>>;
 };
 
 function getShape(schema: ZodFormSchema) {
@@ -49,6 +49,11 @@ export function useForm<T extends ZodFormSchema>(formArg: FormArg<T>) {
           HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
         >,
       ) => {
+        setErrors(errors => ({
+          ...errors,
+          [key]: ""
+        }));
+
         setValues((values) => ({
           ...values,
           [key]: e.target.value,

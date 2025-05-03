@@ -20,29 +20,21 @@ export default function Input({
   className,
   ...props
 }: InputProps) {
-  const [errorInput, setErrorInput] = useState(false);
-
-  useEffect(() => {
-    setErrorInput(!!error);
-  }, [error]);
-
   return (
     <div
-      className={`${styles.container} ${className ?? ""} ${errorInput ? styles.error : ""} ${grow ? styles.grow : ""}`}
+      className={`${styles.container} ${className ?? ""} ${error ? styles.error : ""} ${grow ? styles.grow : ""}`}
     >
       {label && <label className={styles.label}>{label}</label>}
 
       <input
         onChange={(e) => {
-          setErrorInput(false);
-
           if (onChange) {
             onChange(e);
           }
         }}
         {...props}
       />
-      {errorInput && (
+      {error && (
         <p data-testid="input-error" className={styles.errorMessage}>
           {error}
         </p>

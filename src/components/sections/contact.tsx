@@ -10,6 +10,7 @@ import { FcGoogle } from "react-icons/fc"
 import { FaFacebook } from "react-icons/fa"
 import TextArea from "../ui/textarea"
 import { useScrollIntoView } from "@/hooks/scrollIntoView"
+import ContactForm from "../forms/contact";
 
 export default function Contact() {
   const {
@@ -53,29 +54,8 @@ export default function Contact() {
 
       <div className={styles.form}>
         <h1>Send us a Message</h1>
-        <div className={styles.name}>
-          <Input
-            label="First Name"
-            placeholder="E.g John"
-          />
-          <Input
-            label="Last Name"
-            placeholder="E.g Smith"
-          />
-        </div>
 
-        <Input
-          label="Email"
-          placeholder="example@email.com"
-        />
-
-        <TextArea
-          label="Message"
-          rows={4}
-          placeholder="Create your message"
-        />
-
-        <Button>Send Message</Button>
+        <ContactForm />
       </div>
     </Card>
   </div>

@@ -60,21 +60,13 @@
   color: var(--accent-bg-color-3);
 }
 
+.container .card .form h1 {
+  margin-bottom: 1rem;
+}
+
 .container .card .form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   background-color: var(--bg-color-2);
   padding: 2rem;
-  flex: 1;
-}
-
-.container .card .form .name {
-  display: flex;
-  gap: 1rem;
-}
-
-.container .card .form .name > * {
   flex: 1;
 }
 
@@ -105,9 +97,5 @@
 @media only screen and (max-width: 768px) {
   .container {
     padding: 1rem;
-  }
-
-  .container .card .form .name {
-    flex-direction: column;
   }
 }
