@@ -23,7 +23,16 @@
   padding: 2rem;
   background-color: transparent;
 }
+.container .left {
+  display: flex;
+}
 
-.container h1 {
+.container .left h1 {
   font-weight: bold;
+  color: var(--accent-bg-color-2);
+}
+
+.container .left .logo {
+  height: 2rem;
+  width: auto;
 }
