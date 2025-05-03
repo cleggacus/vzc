@@ -4,11 +4,8 @@ import { FaLinkedinIn, FaLocationPin, FaPhone, FaTwitter } from "react-icons/fa6
 import Card from "../ui/card"
 import styles from "./contact.module.css"
 import { IoMail } from "react-icons/io5"
-import Input from "../ui/input"
-import Button from "../ui/button"
 import { FcGoogle } from "react-icons/fc"
 import { FaFacebook } from "react-icons/fa"
-import TextArea from "../ui/textarea"
 import { useScrollIntoView } from "@/hooks/scrollIntoView"
 import ContactForm from "../forms/contact";
 

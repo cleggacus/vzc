@@ -5,6 +5,8 @@ export function useScrollIntoView<T extends HTMLElement>(threshold = 0.1) {
   const ref = useRef<T>(null);
 
   useEffect(() => {
+    if (!ref.current) return;
+
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
@@ -14,16 +16,12 @@ export function useScrollIntoView<T extends HTMLElement>(threshold = 0.1) {
       threshold
     });
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(ref.current);
 
     return () => {
       if (ref.current) observer.unobserve(ref.current);
     };
-  }, [ref, {
-    threshold
-  }]);
+  }, [threshold]);
 
   return {
     ref,

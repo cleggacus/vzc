@@ -15,8 +15,6 @@ const contactSchema = z.object({
   message: z.string().min(1, "Message is required"),
 })
 
-type ContactSchema = z.infer<typeof contactSchema>
-
 export default function ContactForm() {
   const [state, setState] = useState<"awaiting" | "sending" | "sent">("awaiting");
 
