@@ -25,10 +25,10 @@ export default function Services() {
         name="Expert Consultation"
         description="Get personalized guidance from our ESG specialists"
         points={[
-          "fio aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "joawie jfoiwaej fioaw jeofi woaef",
-          "jfoiwaej fioaw jeofi woaef",
+          "One-on-one strategy call",
+          "Industry-specific ESG advice",
+          "Actionable insights, fast",
+          "Align with global standards"
         ]}
       />
 
@@ -37,10 +37,10 @@ export default function Services() {
         name="Free Assesment"
         description="Get a detailed analysis of your ESG needs"
         points={[
-          "fio aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "joawie jfoiwaej fioaw jeofi woaef",
-          "jfoiwaej fioaw jeofi woaef",
+          "Identify ESG risk factors",
+          "Customized gap analysis",
+          "Quick readiness snapshot",
+          "Prioritized improvement areas"
         ]}
       />
 
@@ -49,10 +49,10 @@ export default function Services() {
         name="Demo Session"
         description="See the platform in action with your data"
         points={[
-          "fio aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "joawie jfoiwaej fioaw jeofi woaef",
-          "jfoiwaej fioaw jeofi woaef",
+          "Live walkthrough with expert",
+          "Use your real data",
+          "Interactive Q&A",
+          "Explore key platform features",
         ]}
       />
 
@@ -61,10 +61,11 @@ export default function Services() {
         name="Implementation Support"
         description="Full assistance with platform onboarding"
         points={[
-          "fio aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "aweoif joawie jfoiwaej fioaw jeofi woaef",
-          "joawie jfoiwaej fioaw jeofi woaef",
-          "jfoiwaej fioaw jeofi woaef",
+          "Step-by-step onboarding",
+          "Technical setup handled",
+          "Team training included",
+          "Ongoing success check-ins",
+
         ]}
       />
     </div>
