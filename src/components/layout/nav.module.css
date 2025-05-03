@@ -9,14 +9,6 @@
   gap: 1.5rem;
 }
 
-.links.open {
-  opacity: 1;
-}
-
-.links.close {
-  opacity: 0;
-}
-
 .menuIcon {
   cursor: pointer;
   display: none;
@@ -37,6 +29,20 @@
     width: 12rem;
     margin-top: 1rem;
     box-shadow: var(--card-1-shadow);
+    transition: 
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .links.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .links.close {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-2rem);
   }
 
   .menuIcon {
