@@ -1,5 +1,45 @@
 .container {
+  position: relative;
+  height: 100%;
+}
+
+.links {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+}
+
+.links.open {
+  opacity: 1;
+}
+
+.links.close {
+  opacity: 0;
+}
+
+.menuIcon {
+  cursor: pointer;
+  display: none;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--bg-color-2);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 12rem;
+    margin-top: 1rem;
+    box-shadow: var(--card-1-shadow);
+  }
+
+  .menuIcon {
+    display: block;
+  }
 }
